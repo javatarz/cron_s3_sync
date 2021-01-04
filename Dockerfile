@@ -5,14 +5,15 @@ ARG BUILD_DATE
 ARG VCS_REF
 ARG BUILD_VERSION
 ARG SOURCE_BRANCH
+ARG SOURCE_REPOSITORY_URL="https://github.com/javatarz/cron_s3_sync"
 
 # Labels
 # Ref: https://rehansaeed.com/docker-labels-depth/
 LABEL org.opencontainers.image.created="${BUILD_DATE}"
 LABEL org.opencontainers.image.authors="javatarz"
 LABEL org.opencontainers.image.url="https://hub.docker.com/r/javatarz/cron_s3_sync"
-LABEL org.opencontainers.image.documentation="https://github.com/javatarz/cron_s3_sync/blob/main/README.md"
-LABEL org.opencontainers.image.source="https://github.com/javatarz/cron_s3_sync"
+LABEL org.opencontainers.image.documentation="${SOURCE_REPOSITORY_URL}/blob/main/README.md"
+LABEL org.opencontainers.image.source="${SOURCE_REPOSITORY_URL}"
 LABEL org.opencontainers.image.version="${BUILD_VERSION}"
 LABEL org.opencontainers.image.revision="${VCS_REF}"
 LABEL org.opencontainers.image.vendor="javatarz"

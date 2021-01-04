@@ -14,16 +14,13 @@ echo ">> Source Branch: $SOURCE_BRANCH"
 echo ">> Docker Repo: $DOCKER_REPO"
 echo ">> Image Name: $IMAGE_NAME"
 
-echo "> Env:"
-env
-
 echo "> Run docker build"
 docker build \
-  --build-arg BUILD_DATE='$build_date' \
-  --build-arg VCS_REF='$SOURCE_COMMIT' \
-  --build-arg BUILD_VERSION='$version' \
-  --build-arg SOURCE_BRANCH='$SOURCE_BRANCH' \
-  --tag '$IMAGE_NAME' \
+  --build-arg BUILD_DATE="$build_date" \
+  --build-arg VCS_REF="$SOURCE_COMMIT" \
+  --build-arg BUILD_VERSION="$version" \
+  --build-arg SOURCE_BRANCH="$SOURCE_BRANCH" \
+  --build-arg SOURCE_REPOSITORY_URL="$SOURCE_REPOSITORY_URL" \
+  --tag "$DOCKER_REPO:$version" \
+  --tag "$IMAGE_NAME" \
   .
-
-echo "> Success!"
