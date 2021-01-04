@@ -1,12 +1,17 @@
 #!/bin/bash
 
+echo "Build variables:"
 build_date="$(date +"%Y-%m-%d %T")"
-echo "Build Date: $build_date"
+echo "> Build Date: $build_date"
 vcs_ref="$(git rev-parse HEAD)"
-echo "VCS Ref: $vcs_ref"
+echo "> VCS Ref: $vcs_ref"
 version=$(cat version_file)
-echo "Version: $version"
+echo "> Version: $version"
 
+echo "> Source Commit: $SOURCE_COMMIT"
+echo "> Source Branch: $SOURCE_BRANCH"
+echo "> Docker Repo: $DOCKER_REPO"
+echo "> Image Name: $IMAGE_NAME"
 
 docker build \
   --build-arg BUILD_DATE='$build_date' \
