@@ -2,14 +2,19 @@
 
 PRs are always welcome!
 Please make sure your editor has [editorconfig support](https://editorconfig.org/).
-This repository is manually built and published for now but soon will have an automated github action to do so.
 
-## Building and deploying latest changes to docker hub
+If you're sending a PR, please make sure maintainers are allowed to edit the PR.
+This allows us to bump up the `version_file` before accepting your PR.
 
-1. `docker login` to authenticate
-2. `./build.sh <version>` to build and tag the latest image
-3. `docker push -a javatarz/cron_s3_sync` to push the image to dockerhub
+## Versioning guide
+Builds on this repository are [semantically versioned](https://semver.org/).
+Current build number is specified in the `version_file`
 
-### Versioning guide
-It's best to [semantically version](https://semver.org/) your builds.
+## Building an image locally
+Running `hooks/build` should create an image for this repository
 
+### Running tests
+This image does not have any tests yet :( We're accepting PRs to help fix this.
+
+## Building an image for docker hub
+We are using docker cloud to automatically build all commits to the `main` branch.

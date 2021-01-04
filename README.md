@@ -2,7 +2,7 @@
 
 Sync a directory with S3 on cron.
 
-Tiny [alpine](https://hub.docker.com/_/alpine) footprint with the latest [AWS CLI](https://pypi.org/project/awscli/) and [tini for house cleaning](https://github.com/krallin/tini/issues/8#issuecomment-146135930).
+Tiny [alpine](https://hub.docker.com/_/alpine) footprint with the latest [AWS CLI](https://pypi.org/project/awscli/) and [tini for house cleaning](https://github.com/krallin/tini/issues/8#issuecomment-146135930) which is available on [Docker Hub](https://hub.docker.com/r/javatarz/cron_s3_sync).
 
 ## Usage
 ### Docker Run
