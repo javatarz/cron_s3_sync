@@ -21,6 +21,5 @@ docker build \
   --build-arg BUILD_VERSION="$version" \
   --build-arg SOURCE_BRANCH="$SOURCE_BRANCH" \
   --build-arg SOURCE_REPOSITORY_URL="$SOURCE_REPOSITORY_URL" \
-  --tag "$DOCKER_REPO:$version" \
   --tag "$IMAGE_NAME" \
   .

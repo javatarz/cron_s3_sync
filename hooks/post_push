@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "> Build variables:"
+version=$(cat version_file)
+echo ">> Version: $version"
+
+# Available variables: https://docs.docker.com/docker-hub/builds/advanced/
+echo ">> Image Name: $IMAGE_NAME"
+echo ">> Docker Repo: $DOCKER_REPO"
+
+docker tag $IMAGE_NAME $DOCKER_REPO:$version
+docker push $DOCKER_REPO:$version
